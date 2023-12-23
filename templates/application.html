@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        {
+        background-image:url({%static 'img/img_1.png'%});
+        background-size:100% ;
+        background-repeat:no-repeat;
+        }
+        form
+        {
+        border:3px solid black;
+        height:170px;
+        width:350px;
+        text-align:left;
+        margin-left:400px;
+                margin-top:3px;
+        color:black;
+        padding:120px;
+        }
+        h1
+        {
+        text-align:center;
+        color:black;
+        width:1400px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Job application</h1>
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{abc.as_p}}
+    <input type="submit">
+    <input type="reset">
+</form>
+</body>
+</html>
